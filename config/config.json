@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "foo",
+    "password": "bar",
+    "database": "Your_mom",
+    "host": "192.168.21.158",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "foo",
+    "password": "bar",
+    "database": "Your_mom",
+    "host": "192.168.21.158",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "foo",
+    "password": "bar",
+    "database": "Your_mom",
+    "host": "192.168.21.158",
+    "dialect": "mysql"
+  }
+}
