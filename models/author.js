@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const article = require('./article');
 module.exports = (sequelize, DataTypes) => {
   class Author extends Model {
     /**
@@ -10,8 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-    }
+      this.hasMany(models.Article, {
+        foreignKey: 'author_id',
+        as: 'articles'
+      });
+      this.hasMany(models.Article, {
+        foreignKey: 'author_id',
+        sourceKey: 'id'
+      });
+    }    
   }
   Author.init({
     id: {
