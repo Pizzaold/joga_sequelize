@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('mysql://foo:bar@192.168.21.158:3306/Your_mom');
+const sequelize = new Sequelize('mysql://root:qwerty@localhost:3306/joga_sequelize');
 
 const models = require('../models');
 

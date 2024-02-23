@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "foo",
-    "password": "bar",
-    "database": "Your_mom",
-    "host": "192.168.21.158",
+    "username": "root",
+    "password": "qwerty",
+    "database": "joga_sequelize",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "foo",
-    "password": "bar",
-    "database": "Your_mom",
-    "host": "192.168.21.158",
+    "username": "root",
+    "password": "qwerty",
+    "database": "joga_sequelize",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "foo",
-    "password": "bar",
-    "database": "Your_mom",
-    "host": "192.168.21.158",
+    "username": "root",
+    "password": "qwerty",
+    "database": "joga_sequelize",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }
