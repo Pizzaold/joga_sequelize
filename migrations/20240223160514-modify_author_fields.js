@@ -1,9 +1,8 @@
 'use strict';
 
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    return await Promise.all([
+  up (queryInterface, Sequelize) {
+    return Promise.all([
       queryInterface.changeColumn('Authors', 'id', {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -17,12 +16,9 @@ module.exports = {
     ])
   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
+  down (queryInterface, Sequelize) {
+    return Promise.all([
+      queryInterface.dropTable('Authors')
+    ])
   }
 };

@@ -4,7 +4,7 @@ module.exports = {
     return Promise.all([
       queryInterface.bulkInsert("ArticleTags", [
         {
-          articleId: "10",
+          articleId: "1",
           tagId: "1",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -12,7 +12,7 @@ module.exports = {
       ]),
       queryInterface.bulkInsert("ArticleTags", [
         {
-          articleId: "10",
+          articleId: "1",
           tagId: "2",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -20,7 +20,7 @@ module.exports = {
       ]),
       queryInterface.bulkInsert("ArticleTags", [
         {
-          articleId: "11",
+          articleId: "2",
           tagId: "1",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -28,7 +28,7 @@ module.exports = {
       ]),
       queryInterface.bulkInsert("ArticleTags", [
         {
-          articleId: "11",
+          articleId: "2",
           tagId: "3",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -36,7 +36,7 @@ module.exports = {
       ]),
       queryInterface.bulkInsert("ArticleTags", [
         {
-          articleId: "12",
+          articleId: "3",
           tagId: "4",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -44,7 +44,7 @@ module.exports = {
       ]),
       queryInterface.bulkInsert("ArticleTags", [
         {
-          articleId: "12",
+          articleId: "3",
           tagId: "5",
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -52,7 +52,7 @@ module.exports = {
       ]),
       queryInterface.bulkInsert("ArticleTags", [
         {
-          articleId: "12",
+          articleId: "3",
           tagId: "6",
           createdAt: new Date(),
           updatedAt: new Date(),
