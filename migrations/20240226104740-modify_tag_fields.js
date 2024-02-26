@@ -4,13 +4,13 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     return await Promise.all([
-      queryInterface.changeColumn('Authors', 'id', {
+      queryInterface.changeColumn('Tags', 'id', {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
         allowNull: false
       }),
-      queryInterface.changeColumn('Authors', 'name', {
+      queryInterface.changeColumn('Tags', 'name', {
         type: Sequelize.STRING,
         allowNull: false
       })
