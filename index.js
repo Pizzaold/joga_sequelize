@@ -23,6 +23,7 @@ app.use('/article', articleRouter);
 app.use('/author', authorRouter);
 app.use('/admin/article', articleRouter);
 app.use('/admin/edit', articleRouter);
+app.use('/admin/delete', articleRouter);
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
