@@ -20,13 +20,62 @@ const createArticle = (req, res) => {
     })
     .then((article) => {
         console.log(article);
-        return res.status(200).json({ message: "Article created successfully", article });
+        return res.status(200).json({ message: "Article created successfully", newArticle });
     })
     .catch((err) => {
         res.status(500).send(err.message);
     });
 }
 
+const updateArticle = (req, res) => {
+    const method = req.method;
+
+    if (method === 'GET') {
+        const id = req.params.id;
+        models.Article.findByPk(id)
+            .then((article) => {
+                if (!article) {
+                    return res.status(404).json({ message: "Article not found" });
+                }
+                return res.status(200).json({ article });
+            })
+            .catch((err) => {
+                res.status(500).send(err.message);
+            });
+    } else if (method === 'POST') {
+        const id = req.params.id;
+        const { name, slug, image, body, authorId } = req.body;
+
+        models.Article.update(
+            {
+                name: name,
+                slug: slug,
+                image: image,
+                body: body,
+                published: new Date().toISOString().slice(0, 19).replace('T', ' '),
+                AuthorId: authorId
+            },
+            {
+                where: { id: id }
+            }
+        )
+        .then((result) => {
+            if (result[0] === 0) {
+                return res.status(404).json({ message: "Article not found" });
+            }
+            return res.status(200).json({ message: "Article updated successfully" });
+        })
+        .catch((err) => {
+            res.status(500).send(err.message);
+        });
+    } else {
+        return res.status(405).json({ message: "Method Not Allowed" });
+    }
+}
+
+
+
 module.exports = {
     createArticle,
+    updateArticle,
 };
